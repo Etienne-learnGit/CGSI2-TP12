@@ -1,5 +1,5 @@
 def modulo(x, y) :
-    if  x < y:
+    if  x < y :
         return x
     else:
         return modulo(x - y, y)

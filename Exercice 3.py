@@ -1,9 +1,7 @@
 def pow(x, n):
-    if n == 1 :
-        return x
-    elif n == 0 :
+    if n == 0 :
         return 1
-    return x*pow(x, n-1)
+    return x * pow(x, n-1)
 
 print(pow(42, 0)) # 1
 print(pow(1, 10)) # 1
