@@ -1,17 +1,20 @@
 import turtle as tt
 
-def drawCurve(tt, l, x) :
-    if x == 0 :
+def drawCurve(tt, l, order):
+    if order == 0 :
+        tt.forward(l)
         return
-    tt.forward(l/4**x)
-    tt.left(45)
-    tt.forward(l/4**x)
-    tt.right(90)
-    tt.forward(l/4**x)
-    tt.left(45)
-    tt.forward(l/4**x)
-    return drawCurve(tt, l, x)
+    else :
+        l /= 3
+        drawCurve(tt, l, order-1)
+        tt.left(60)
+        drawCurve(tt, l, order-1)
+        tt.right(120)
+        drawCurve(tt, l, order-1)
+        tt.left(60)
+        drawCurve(tt, l, order-1)
 
-tt.setup(800, 400)
-drawCurve(tt, 300, 2)
-tt.exitonclick()
+if __name__ == "__main__" :
+    tt.setup(800, 400)
+    drawCurve(tt, 300, 4)
+    tt.exitonclick()
