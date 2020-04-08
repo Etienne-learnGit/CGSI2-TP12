@@ -16,5 +16,7 @@ def drawCurve(tt, l, order):
 
 if __name__ == "__main__" :
     tt.setup(800, 400)
-    drawCurve(tt, 300, 4)
+    for i in range(0,3) :
+        drawCurve(tt, 300, 3)
+        tt.right(120)
     tt.exitonclick()
